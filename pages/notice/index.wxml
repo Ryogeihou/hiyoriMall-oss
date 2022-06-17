@@ -1,0 +1,11 @@
+<navigator wx:for="{{noticeList}}" wx:key="id" url="/pages/notice/show?id={{item.id}}">
+  <view class='cashlogs'>
+    <view class='profile'>
+      <view class='typeStr'>{{item.title}}</view>
+      <view class='dateAdd'>{{ item.dateAdd }}</view>
+    </view>
+    <view class='amount'> 查看 > </view>
+  </view>
+</navigator>
+
+        <button open-type="contact" type="primary">点击联系客服</button>

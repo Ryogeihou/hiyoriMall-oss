@@ -1,0 +1,26 @@
+<view class="captain">
+<view class="team"><text>{{memberTotal}}</text> 名友達を誘いました</view>
+<view class="pointTotal">ポイント合計：<text>{{nowPoint}}</text></view>
+<view class="memberList">
+    <view class="memberBox" wx:for="{{memberList}}" wx:key="userId">
+        <view class="icon">
+            <image class="avatar" 
+            mode="widthFix"
+            src="{{item.mask==0?item.avatarUrl:'cloud://rhtest-xncrn.7268-rhtest-xncrn-1301029421/pics/132.jpeg'}}"></image>
+        </view>
+        <view class="context">
+            <view class="name">ニックネーム: {{item.mask==0?item.nickName:'Someone'}}</view>
+            <view class="point">会員番号: {{item.mask==0?item.userId:'*'}}</view>
+            <!-- <view class="point">: {{item.point}}</view> -->
+            <view class="point">入会時間: {{item.mask==0?item.createdTime:'****-**-** **:**:**'}}</view>
+        </view>
+    </view>
+</view>
+    <view class="pointTitle">ポイント獲得詳細</view>
+    <view class="pointHistory" >
+        <view class="pointBox" wx:for="{{likeList}}" wx:key="_id">
+            {{item.userId}} 番さんが {{item.pointTitle}}番商品をいいねしたことにより<br/>
+            <view>{{item.gainPoint}}ポイント ゲット</view>
+        </view>
+    </view>
+</view>

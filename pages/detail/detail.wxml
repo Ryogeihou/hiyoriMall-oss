@@ -1,0 +1,127 @@
+<view class="detail_swiper">
+    <swiper autoplay circular indicator-dots>
+        <swiper-item wx:for="{{info.pics}}" wx:key="key">
+            <image lazy-load="true" mode="heidthFix" src="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="goods_price">
+    <text>¥</text>
+    <text class="price {{userInfo.userId?'ismenber':''}}">{{info.price}}</text>
+    <text class="tag">会员</text>
+    <text class="membPrice">¥{{info.vipPrice ? info.vipPrice : info.price - 2}}</text>
+</view>
+<view class="goods_name_row">
+    <view class="goods_subhead">{{info.subHead}}</view>
+    <view class="goods_name">{{info.title}}</view>
+    <!-- <view class="goods_collect" bindtap="isLogin">
+        <text class="iconfont {{isCollect?'icon-shoucang-':'icon-shoucang'}}"></text>
+        <view class="collect_text">收藏</view>
+    </view> -->
+</view>
+<view wx:if="{{userInfo.userId}}" class="membFeeBox">
+    日和会员 已为您节省
+    <text>{{info.vipPrice ? info.price - info.vipPrice : 2}}</text>
+    元
+    <view class="right">了解更多 ></view>
+</view>
+<view wx:else class="membFeeBox">
+    日和会员 预计节省
+    <text>2</text>
+    元
+    <view class="right">
+        <view id="membership" bindtap="isLogin">免费开卡 ></view>
+    </view>
+</view>
+<!-- <view class="ruleBox">
+    <image  mode="widthFix" src="/images/notice.png" />
+</view> -->
+<!-- <view class="recommandCateBox">
+<scroll-view scroll-left="{{scrollLeft}}" scroll-with-animation scroll-x  class="cat_container">
+    <view style="display: flex; flex-direction: row;">
+        <block wx:for="{{rightContent.children}}" wx:key="cat_id">
+            <view 
+            class="cat_item  {{index===currentIndex?'active':''}}"
+            bindtap="handleItemTap"
+            data-index="{{index}}"
+            id="{{item.cat_id}}"
+            >
+                <view class="cat_image" >
+                    <image lazy-load="true" class="cat_icon" mode='widthFix' src="{{item.cat_icon}}"></image>
+                </view>
+                <view class="cat_name">
+                    <text class="cat_title">{{item.cat_name}}</text> 
+                </view>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+</view> -->
+<view class="goods_info">
+    <view class="goods_info_title">图文详情</view>
+    <view class="goods_info_content" wx:for="{{info.introduce}}" wx:key="key">
+        <!-- 富文本 -->
+        <!-- {{info.introduce}} -->
+        <!-- <rich-text class="goods_introduce" nodes="{{info.introduce}}">
+        </rich-text> -->
+        <image class="item_image" mode="widthFix" lazy-load="true" src="{{item}}"></image>
+    </view>
+</view>
+<view wx:for="{{info}}" wx:key="key" class="btm_tool">
+    <!-- <view class="tool_item" bindtap="handleCollect">
+        <text class="iconfont {{isCollect?'icon-shoucang-':'icon-shoucang'}}"></text>
+        <view class="collect_text">收藏</view>
+    </view> -->
+    <view class="tool_item">
+        <view class="iconfont icon-kefu"></view>
+        <view>サービス</view>
+        <button open-type="contact">客服</button>
+    </view>
+    <!-- <view class="tool_item" id="{{info.rhid}}">
+        <view class="iconfont icon-fenxiangcopy"></view>
+        <view>分享</view>
+        <button open-type="share"></button>
+    </view> -->
+    <view class="tool_item" id="{{info.rhid}}" type="poster" bindtap="handleLike">
+        <view class="iconfont {{isCollect?'icon-shoucang-':'icon-shoucang'}}"></view>
+        <view>いいね</view>
+    </view>
+    <view class="tool_item" id="{{info.rhid}}" type="poster" bindtap="getQR">
+        <view class="iconfont icon-fenxiangcopy"></view>
+        <view>ポスター</view>
+        <!-- <poster id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+    海报
+    </poster> -->
+    </view>
+    <!-- <navigator open-type="switchTab" url="/pages/cart/cart" class="tool_item">
+        <view class="iconfont icon-xiazai1"></view>
+        <view>购物车</view>
+    </navigator>
+    <view bindtap="handleCartAdd" data-item="{{info}}" class="tool_item btn_cart">
+        加入购物车
+    </view> -->
+    <!-- <view bindtap="" class="tool_item btn_buy">
+        立即购买
+    </view> -->
+</view>
+<poster id="poster" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail"></poster>
+<view wx:if="{{showposterImg}}" class="popup-mask" bindtap="qqq"></view>
+<view wx:if="{{showposterImg}}" class="posterImg-box">
+    <image mode="widthFix" class="posterImg" src="{{posterImg}}" bindtap="savePosterPic"></image>
+    <view class="poster-btn">
+        <view class="btn-create" bindtap="savePosterPic">保存</view>
+        <view class="btn-cancel" bindtap="qqq">取消</view>
+    </view>
+</view>
+<!-- <block wx:if="{{posterShow}}"> -->
+<!-- <view class="poster-mask"></view> -->
+<!-- <view class="poster"> -->
+<!-- <canvas class="canvas" style="{{canvasstyle}}" canvas-id="firstCanvas"></canvas> -->
+<!-- </view> -->
+<!-- <view class="poster-btn"> -->
+<!-- <button type="primary" size="mini" bindtap='_saveToMobile'> 保存图片 </button> -->
+<!-- <button type="warn" size="mini" bindtap='closePop'> 关闭 </button> -->
+<!-- </view> -->
+<!-- </block> -->
+<!-- <template is="apifmLogin" data="{{wxlogin: wxlogin}}" /> -->
+<!-- <float-menu /> -->

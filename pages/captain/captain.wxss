@@ -1,0 +1,47 @@
+/* pages/captain/captain.wxss */
+.captain {
+  margin-bottom: 300rpx;
+}
+.team {
+  margin-top: 66rpx;
+  text-align: center;
+  font-size: 38rpx;
+}
+.team text {
+  color: red;
+  font-size: 56rpx;
+}
+.pointTotal {
+  text-align: center;
+}
+.memberList {
+  margin-bottom: 40rpx;
+}
+.memberList .memberBox {
+  background-color: #cecece;
+  height: 220rpx;
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  border-radius: 8rpx;
+  display: flex;
+}
+.memberList .memberBox .icon image {
+  margin: 20rpx;
+  width: 180rpx;
+  border-radius: 5rpx;
+}
+.memberList .memberBox .context {
+  margin-left: 18rpx;
+  margin-top: 20rpx;
+}
+.pointTitle {
+  padding-top: 20rpx;
+  margin: 0 18rpx;
+  font-size: 38rpx;
+  border-top: 2rpx solid #cecece;
+}
+.pointBox {
+  text-align: center;
+  border: solid 8rpx red;
+  border-radius: 2em;
+  margin: 20rpx 20rpx 20rpx 20rpx;
+}

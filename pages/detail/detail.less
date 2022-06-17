@@ -1,0 +1,256 @@
+page {
+    padding-bottom: 90rpx;
+}
+
+.detail_swiper {
+    swiper {
+        height: 70vw;
+        //   background-color:red;
+        text-align: center;
+
+        image {
+            width: 60%;
+        }
+    }
+}
+
+.goods_price {
+    .ismenber {
+       text-decoration: line-through;
+    }
+    .price {
+        font-size: 58rpx;
+    }
+    text {
+        font-size: 38rpx;
+    }
+    .tag {
+        margin-left: 30rpx;
+        font-size: 26rpx;
+        background-color: #f9ddc8;
+        padding: 0 10rpx;
+        color: #553320;
+        font-weight: normal;
+    }
+    .membPrice{
+        color: #fff;
+        background-color: #000;
+        font-size: 28rpx;
+        padding: 0 10rpx;
+        font-weight: normal;
+    }
+    padding: 15rpx;
+    font-size: 58rpx;
+    // font-style: 32rpx;
+    font-weight: bold;
+    color: #000 //var(--themeColor);
+}
+
+.goods_name_row {
+    // border-top: 5rpx solid #dedede;
+    // border-bottom: 5rpx solid #dedede;
+    // display: flex;
+    padding: 0 0 0 10rpx;
+
+    .goods_subhead {
+        // width: 100%;
+        padding: 0 10rpx;
+        font-size: 36rpx;
+        font-weight: bold;
+        margin-top: 10rpx;
+        margin-bottom: 30rpx;
+
+    }
+    .goods_name {
+        flex: 5;
+        color: #000;
+        font-style: 30rpx;
+        padding: 0 10rpx;
+
+        display: -webkit-box;
+        overflow: hidden; //超出边框文本隐藏
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    .goods_collect {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-left: 1rpx solid #000;
+
+        .icon-shoucang- {
+            color: orangered;
+        }
+
+
+    }
+
+}
+
+.membFeeBox{
+    text {
+        color: red;
+    }
+    .right{
+        display: block;
+        float: right;
+    }
+    margin: 15rpx;
+    font-size: 26rpx;
+    padding: 20rpx;
+    color: #a36948;
+    background: linear-gradient(90deg,#f9deca,#f2c5a5);
+    margin-bottom: 50rpx;
+}
+
+.ruleBox {
+    width: 100%;
+    
+}
+
+
+.recommandCateBox {
+    height: 200rpx;
+    background-color: #666;
+}
+
+
+
+
+
+.goods_info {
+    .goods_info_title {
+        font-style: 32rpx;
+        color: red;
+        font-weight: 600;
+        padding: 20rpx;
+    }
+
+    .goods_info_content {
+        width: 100%;
+        // background-color: #666;
+
+        .item_image {
+            width: 100%;
+            // height: 600rpx;
+            display: flex;
+        }
+
+    }
+}
+
+// .goods_introduce {
+//     weight: 20rpx;
+// }
+
+
+.btm_tool {
+    padding-bottom: 50rpx;
+    border-top: 1rpx solid #ccc;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100rpx;
+    background-color: #fff;
+    display: flex;
+    font-size: 38rpx;
+    .tool_item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 24rpx;
+        position: relative; //相对定位
+
+        button {
+            position: absolute; //绝对定位
+            top: 0;
+            left: 0;
+            widows: 100%; //与父元素重合
+            height: 100%; //与父元素重合
+            opacity: 0; //透明度0
+        }
+    }
+
+    .btn_cart {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffa500;
+        color: #fff;
+        font-size: 30rpx;
+        font-weight: 600;
+    }
+
+    .btn_buy {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #eb4450;
+        color: #fff;
+        font-size: 30rpx;
+        font-weight: 600;
+    }
+}
+
+
+// poster
+.posterImg-box {
+    position: absolute;
+    top: 64rpx;
+    left: 32rpx;
+    width: 686rpx;
+    margin-bottom: 100rpx;
+    z-index: 999999;
+  }
+  
+  .posterImg {
+    width: 100%;
+  }
+  
+  .popup-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+  }
+  
+  .btn-create {
+    margin: 32rpx;
+    margin-bottom: 0;
+    height: 88rpx;
+    line-height: 88rpx;
+    background: #e64340;
+    color: #fff;
+    text-align: center;
+    border-radius: 8rpx;
+    width: 288rpx;
+  }
+  
+  .btn-cancel {
+    margin: 32rpx;
+    margin-bottom: 0;
+    height: 88rpx;
+    line-height: 88rpx;
+    background: #666;
+    color: #fff;
+    text-align: center;
+    border-radius: 8rpx;
+    width: 288rpx;
+  }
+  .poster-btn{
+      display: flex;
+  }
+  /* poster */

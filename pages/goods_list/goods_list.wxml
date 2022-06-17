@@ -1,0 +1,159 @@
+<!-- 二级开始 -->
+<scroll-view scroll-left="{{scrollLeft}}" scroll-with-animation scroll-x  class="cat_container">
+    <view style="display: flex; flex-direction: row;">
+        <!-- <view class="cat_item {{index===currentIndex?'active':''}}" >
+            <view class="cat_image">
+                <image lazy-load="true" class="cat_icon" mode='widthFix' src="cloud://rhtest-xncrn.7268-rhtest-xncrn-1301029421/image/SHISEIDO90g/SHISEIDO 90g 00.jpg"></image>
+            </view>
+            <view class="cat_name">
+                <text class="cat_title">全部</text>
+            </view>
+        </view> -->
+        <block wx:for="{{rightContent.children}}" wx:key="cat_id">
+            <view 
+            class="cat_item  {{item.cat_id == currentIndex ? 'active':''}}"
+            bindtap="handleItemTap"
+            data-current="{{item.cat_id}}"
+            id="{{item.cat_id}}"
+            >
+                <view class="cat_image" >
+                    <image lazy-load="true" class="cat_icon" mode='widthFix' src="{{item.cat_icon}}"></image>
+                </view>
+                <view class="cat_name">
+                    <text class="cat_title">{{item.cat_name}}</text> 
+                </view>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+<!-- 二级结束 -->
+<!-- 监听自定义事件 -->
+<!-- <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange" ></Tabs> -->
+<!-- 搜索开始  -->
+<SearchInput></SearchInput>
+<!-- 搜索结束 -->
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="first_tab">
+            <view wx:for="{{goodsList}}" wx:key="key" id="{{item.rhid}}" class="item-container" bindtap="toDetail" >
+                <view class="goods_item">
+                    <view class="good_image">
+                        <image lazy-load="true" class="item_image" mode='widthFix' src="{{item.pics[0]?item.pics[0]:'cloud://rhtest-xncrn.7268-rhtest-xncrn-1301029421/image/暂无图片.jfif'}}"></image>
+                    </view>
+                    <view class='content'>
+                        <view class="title">{{item.subHead}} </view>
+                        <view class="subtitle">{{item.title}} </view>
+                        <view class="goods_info">
+                            <view class="price_info">
+                            <view class="price">¥{{item.price}}</view> 
+                            <view wx:key="item" class="tag">热度:{{item.count}}</view>
+                            </view>
+                            <view class='action'>
+                            <view class= "iconfont icon-jiarugouwuche" data-item="{{item}}" catchtap="addCart"></view>
+                            </view>
+                        </view>
+                    </view>
+                    
+                </view>
+            </view>
+        </view>
+    </block>
+
+    <block wx:if="{{tabs[1].isActive}}">
+        <view class="first_tab">
+            <view wx:for="{{goodsList}}" wx:key="key" id="{{item.rhid}}" class="item-container" bindtap="toDetail" >
+                <view class="goods_item">
+                    <view class="good_image">
+                        <image lazy-load="true" class="item_image" mode='widthFix' src="{{item.pics[0]?item.pics[0]:'cloud://rhtest-xncrn.7268-rhtest-xncrn-1301029421/image/暂无图片.jfif'}}"></image>
+                    </view>
+                    <view class='content'>
+                        <view class="title">{{item.subHead}} </view>
+                        <view class="subtitle">{{item.title}} </view>
+                        <view class="goods_info">
+                            <view class="price_info">
+                            <view class="price">¥{{item.price}}</view> 
+                            <view wx:key="item" class="tag">热度:{{item.count}}</view>
+                            </view>
+                            <view class='action'>
+                            <view class= "iconfont icon-jiarugouwuche" data-item="{{item}}" catchtap="addCart"></view>
+                            </view>
+                    </view>
+                    </view>
+                    
+                </view>
+            </view>
+        </view>
+    </block>
+
+    <block wx:if="{{tabs[2].isActive}}">
+        <view class="first_tab">
+            <view wx:for="{{goodsList}}" wx:key="key" id="{{item.rhid}}" class="item-container" bindtap="toDetail" >
+                <view class="goods_item">
+                    <view class="good_image">
+                        <image lazy-load="true" class="item_image" mode='widthFix' src="{{item.pics[0]?item.pics[0]:'cloud://rhtest-xncrn.7268-rhtest-xncrn-1301029421/image/暂无图片.jfif'}}"></image>
+                    </view>
+                    <view class='content'>
+                        <view class="title">{{item.subHead}} </view>
+                        <view class="subtitle">{{item.title}} </view>
+                        <view class="goods_info">
+                            <view class="price_info">
+                            <view class="price">¥{{item.price}}</view> 
+                            <view wx:key="item" class="tag">热度:{{item.count}}</view>
+                            </view>
+                            <view class='action'>
+                            <view class= "iconfont icon-jiarugouwuche" data-item="{{item}}" catchtap="addCart"></view>
+                            </view>
+                        </view>
+                    </view>
+                    
+                </view>
+            </view>
+        </view>
+    </block>
+
+    <block wx:if="{{tabs[3].isActive}}">
+        <view class="first_tab">
+            <view wx:for="{{goodsList}}" wx:key="key" id="{{item.rhid}}" class="item-container" bindtap="toDetail" >
+                <view class="goods_item">
+                    <view class="good_image">
+                        <image lazy-load="true" class="item_image" mode='widthFix' src="{{item.pics[0]?item.pics[0]:'cloud://rhtest-xncrn.7268-rhtest-xncrn-1301029421/image/暂无图片.jfif'}}"></image>
+                    </view>
+                    <view class='content'>
+                        <view class="title">{{item.subHead}} </view>
+                        <view class="subtitle">{{item.title}} </view>
+                        <view class="goods_info">
+                            <view class="price_info">
+                            <view class="price">¥{{item.price}}</view> 
+                            <view wx:key="item" class="tag">热度:{{item.count}}</view>
+                            </view>
+                            <view class='action'>
+                            <view class= "iconfont icon-jiarugouwuche" data-item="{{item}}" catchtap="addCart"></view>
+                            </view>
+                        </view>
+                    </view>
+                    
+                </view>
+            </view>
+        </view>
+    </block>
+    
+      
+
+
+<!-- 
+<block wx:elif="{{tabs[1].isActive}}">
+    <view class="second_tab">
+        <navigator class="goods_item"
+        wx:for="{{goodsList}}"
+        wx:key="rhid"
+        >
+            <view class="goods_img_wrap">
+                <image mode="widthFix" lazy-load="true" src="{{item.pics[0]?item.pics[0]:'cloud://rhtest-xncrn.7268-rhtest-xncrn-1301029421/image/暂无图片.jfif'}}"></image>
+            </view>
+            <view class="goods_info_wrap">
+                <view class="goods_name">{{item.title}}</view>
+                <view class="goods_price">¥{{item.price}}</view>
+            </view>
+        </navigator>
+    </view>
+
+</block> -->

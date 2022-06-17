@@ -1,0 +1,50 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/user/user",
+		"pages/category/category",
+		"pages/detail/detail",
+		"pages/goods_list/goods_list",
+		"pages/login/login",
+		"pages/search/search",
+		"pages/brand/brand",
+		"pages/captain/captain",
+		"pages/collect/collect"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "日和海淘",
+		"navigationBarTextStyle": "black",
+		"backgroundColor": "#666666"
+	},
+	"tabBar": {
+		"color": "#999",
+		"selectedColor": "#ff2d4a",
+		"backgroundColor": "#fafafa",
+		"position": "bottom",
+		"borderStyle": "white",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "icons/_home.png",
+				"selectedIconPath": "icons/home.png"
+			},
+			{
+				"pagePath": "pages/category/category",
+				"text": "分类",
+				"iconPath": "icons/_category.png",
+				"selectedIconPath": "icons/category.png"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": "我的",
+				"iconPath": "icons/_account.png",
+				"selectedIconPath": "icons/account.png"
+			}
+		]
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json"
+}

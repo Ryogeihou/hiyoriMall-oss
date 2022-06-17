@@ -1,0 +1,7 @@
+<button type="primary" plain bindtap="getUserProfile">登录</button>
+
+<!-- <button bindtap="getUserProfile"> 获取头像昵称 </button> -->
+<!-- <button  type="primary" plain open-type="getUserInfo"
+ bindgetuserinfo="handleGetUserInfo">
+    test
+</button> -->

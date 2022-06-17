@@ -1,0 +1,94 @@
+page {
+    background-color: #f3f4f6;
+
+}
+
+.collect_main {
+    // height: 100%;
+    background-color: #f3f4f6;
+
+    .collect_title {
+        padding: 40rpx 0;
+
+        .collect_tips {
+            padding         : 15rpx;
+            border          : 1rpx solid #ccc;
+            margin-left     : 25rpx;
+            background-color: #fff;
+            border-radius   : 20rpx;
+
+        }
+
+        .active {
+            color              : var(--themeColor);
+            // background-color: currentColor;
+            border             : 2rpx solid var(--themeColor);
+            border-radius      : 20rpx;
+
+        }
+    }
+
+    .collect_content {
+        
+        .goods_item {
+            display      : flex;
+            border-bottom: 1rpx solid #ccc;
+            background-color: #fff;
+            margin: 20rpx;
+            border-radius: 20rpx;
+            .goods_img_wrap {
+                flex           : 2;
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+
+                image {
+                    width: 70%;
+                }
+            }
+            .goods_img_wrap1 {
+                flex           : 2;
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+                border-radius: 6rpx;
+                
+                image {
+                    width: 70%;
+                    border-radius: 6rpx;
+                    // box-shadow   : 0 0 20rpx #d8d8d8;
+                margin-right : 30rpx;
+                }
+            }
+
+
+            .goods_info_wrap {
+                flex           : 3;
+                display        : flex;
+                flex-direction : column;
+                justify-content: space-around;
+
+                .goods_title {
+                    display           : -webkit-box;
+                    overflow          : hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                }
+
+                .goods_subHead {
+                    font-size : 26rpx;
+                    color     : #9e9e9e;
+                    display           : -webkit-box;
+                    overflow          : hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                }
+
+                .goods_price {
+                    color    : var(--themeColor);
+                    font-size: 32rpx;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+<view class="cates">
+    <SearchInput></SearchInput>
+    <view class="cates_container">
+      <!--左侧菜单-->
+      <scroll-view scroll-y class="left_menu">
+          <view 
+          class="menu_item {{index===currentIndex?'active':''}}"
+          wx:for="{{leftMenuList}}"
+          wx:key="*this"
+          bindtap="handleItemTap"
+          data-index="{{index}}"
+          >
+          {{item}}
+          </view>
+      </scroll-view>
+      <!--左侧菜单-->
+      <!--右侧商品内容-->
+      <!--在wx:for后面添加wx:key="key" 可消除警告。-->
+      <scroll-view scroll-top="{{scroll-top}}" scroll-y class="right_content">
+        
+        <view class="goods_group">
+          <view class="goods_title">
+              <text class="delimiter"></text>
+              <text class="title">{{rightContent[0].cat_name}}</text>
+              <text class="delimiter"></text>
+          </view>
+          <view class="goods_list">
+              <navigator
+              class="cat_item"
+              wx:for="{{rightContent[0].children}}" wx:key="key"
+              wx:for-index="index2"
+              wx:for-item="item2"
+              wx:key="cat_id"
+              url="/pages/goods_list/goods_list?cid={{item2.cat_id}}">
+              <image mode="widthFix" src="{{item2.cat_icon}}" lazy-load="true"></image>
+              <view class="goods_name">{{item2.cat_name}}</view>
+              </navigator>
+          </view>
+          <view class="goods_title">
+            <text class="delimiter"></text>
+            <text class="title">{{rightContent[1].cat_name}}</text>
+            <text class="delimiter"></text>
+        </view>
+        <view class="goods_list">
+            <navigator
+            class="cat_item"
+            wx:for="{{rightContent[1].children}}" wx:key="key"
+            wx:for-index="index2"
+            wx:for-item="item2"
+            wx:key="cat_id"
+            url="/pages/brand/brand?id={{item2.brandId}}">
+            <image mode="widthFix" src="{{item2.cat_icon}}" lazy-load="true"></image>
+            <view class="goods_name">{{item2.cat_name}}</view>
+            </navigator>
+        </view>
+
+       
+        </view>
+      </scroll-view>
+    </view>
+</view>
+

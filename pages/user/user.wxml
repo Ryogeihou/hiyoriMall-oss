@@ -1,0 +1,83 @@
+<!--pages/my/my.wxml-->
+<view class="user_info_wrap">
+    <!-- <view wx:if="{{1 == 1}}" class="user_img_wrap"> -->
+    <view wx:if="{{userInfo.avatarUrl}}" class="user_img_wrap">
+        <image class="user_bg" mode="widthFix" src="{{userInfo.avatarUrl}}"> </image>
+        <view class="user_info">
+            <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+            <view class="user_name">{{userInfo.nickName}}</view>
+        </view>
+    </view>
+   <view wx:else class="user_img_wrap">
+       <image open class="user_bg" mode="widthFix" src="cloud://rhtest-xncrn.7268-rhtest-xncrn-1301029421/pics/fujisan.jpg"  />
+    <view  class="user_btn">
+        <navigator url="/pages/login/login">登录</navigator>
+    </view>
+    </view> 
+</view>
+<view class="user_content">
+
+    <view class="user_main">
+        <!-- 历史足迹 -->
+        <view class="history_wrap">
+            <navigator url="/pages/collect/collect?type=1">
+                <view class="his_num">{{brandcollectNums || 0}}</view>
+                <view class="his_name">收藏的品牌</view>
+            </navigator>
+            <navigator url="/pages/collect/collect?type=2">
+                <view class="his_num">{{userInfo.collection.length || 0}}</view>
+                <view class="his_name">收藏的商品</view>
+            </navigator>
+            <navigator url="/pages/collect/collect?type=3">
+                <view class="his_num">0</view>
+                <view class="his_name">收藏的文章</view>
+            </navigator>
+            <navigator url="/pages/collect/collect?type=4">
+                <view class="his_num">0</view>
+                <view class="his_name">浏览足迹</view>
+            </navigator>
+        </view>
+        <!-- 我的订单 -->
+        <!-- <view class="orders_wrap"> -->
+        <!-- <view class="orders_title">我的订单</view> -->
+            <!-- <view class="order_content">
+                <navigator url="/pages/order/order?type=1">
+                    <view class="iconfont icon-huaban"></view>
+                    <view class="order_name">全部订单</view>
+                </navigator>
+                <navigator url="/pages/order/order?type=2">
+                    <view class="iconfont icon-daifukuan"></view>
+                    <view class="order_name">待付款</view>
+                </navigator>
+                <navigator url="/pages/order/order?type=3">
+                    <view class="iconfont icon-daishouhuo"></view>
+                    <view class="order_name">待收货</view>
+                </navigator> 
+                <navigator url="/pages/order/order?type=4">
+                    <view class="iconfont icon-tuikuan"></view>
+                    <view class="order_name">退款/退货</view>
+                </navigator>
+            </view>
+        </view> -->
+        <!-- 收货地址管理 -->
+        <!-- <view class="address_wrap">
+            收货地址管理
+        </view> -->
+        <!-- 应用程序相关 -->
+        <view class="app_info_wrap">
+            <view class="app_info_item app_info_contact">
+                <text>contact</text>
+                <text>260900111</text>
+                <!-- <button open-type="contact">点这里</button> -->
+            </view>
+            <view class="app_info_item">feedback</view>
+            <view class="app_info_item">about us</view>
+        </view>
+        <!-- 推荐 -->
+        <navigator url="/pages/captain/captain?userId={{userInfo.userId}}">
+        <view class="recommend_wrap" id="{{info.rhid}}" bandtap="captain">
+            point
+        </view>
+        </navigator>
+    </view>
+</view>

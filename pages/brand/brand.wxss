@@ -1,0 +1,272 @@
+page {
+  width: 100%;
+}
+.brand-detail {
+  font-size: 26rpx;
+  line-height: 1.4;
+}
+.brand-detail .brand-header image {
+  position: fixed;
+  filter: blur(1.5rpx);
+}
+.brand-detail .brand-container {
+  padding-top: 240rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  overflow: auto;
+}
+.brand-detail .brand-container .brand-content {
+  background-color: #fff;
+}
+.brand-detail .brand-container .brand-content .brand-content-header {
+  padding: 20rpx 30rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-unfold {
+  margin: 20rpx;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-unfold ::after,
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-unfold ::before {
+  content: "";
+  flex: 2;
+  height: 1rpx;
+  background: #9e9e9e;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-unfold .text {
+  -webkit-box-flex: 0;
+  flex: 23rpx;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-size: 22rpx;
+  color: #9e9e9e;
+  line-height: 32rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-unfold .text .top {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-unfold .text image {
+  width: 20rpx;
+  height: 10rpx;
+  padding: 0 5rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info {
+  position: relative;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info .brand-info-top {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info .brand-info-top .brand-info-logo-container {
+  justify-content: space-between;
+  display: flex;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info .brand-info-top .brand-info-logo-container .brand-info-logo {
+  width: 130rpx;
+  height: 130rpx;
+  margin-top: -50rpx;
+  border-radius: 6rpx;
+  box-shadow: 0 0 20rpx #d8d8d8;
+  margin-right: 30rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info .brand-info-top .brand-info-logo-container .brand-info-logo image {
+  width: 70%;
+  border-radius: 6rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info .brand-info-top .brand-info-logo-container .brand-info-title-container .brand-info-focus {
+  font-size: 20rpx;
+  color: #9e9e9e;
+  margin-top: 6rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info .brand-info-top .brand-info-focus-btn {
+  width: 114rpx;
+  height: 48rpx;
+  box-shadow: 0 4rpx 16rpx 0 hsla(0, 0%, 60%, 0.24);
+  border-radius: 40rpx;
+  border: 1px solid #9e9e9e;
+  font-size: 23rpx;
+  color: #6e6e6e;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info .brand-info-top .brand-info-focus-btn .iconfont {
+  font-size: 26rpx;
+  margin-right: 6rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info .brand-info-top .brand-info-focus-btn .icon-gou {
+  color: orangered;
+  margin-right: 2rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info .brand-info-top .brand-info-focus-btn .focus {
+  color: orangered;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .folded {
+  display: none;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-middle .isBrandInfoUnfold {
+  max-height: 170rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-middle .brand-info-desc {
+  font-size: 26rpx;
+  color: #6e6e6e;
+  line-height: 34rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-middle .brand-info-desc text {
+  margin: 0 0 10rpx;
+  overflow: hidden;
+  display: block;
+  margin-block-start: 0.5rpx;
+  margin-block-end: 0.5rpx;
+  margin-inline-start: 0rpx;
+  margin-inline-end: 0rpx;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-desc-approve {
+  flex-wrap: wrap;
+}
+.brand-detail .brand-container .brand-content .brand-content-header .brand-info-desc-approve image {
+  width: 100%;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page {
+  height: 100%;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .brand-category-list-container {
+  background-color: #fff;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .brand-category-list-container .cat_container {
+  padding-bottom: 13rpx;
+  border-bottom: 2rpx solid #edece8;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .brand-category-list-container .cat_container .cat_item {
+  height: 120rpx;
+  width: 120rpx;
+  margin-left: 18rpx;
+  border-radius: 5px;
+  border: 1.5rpx solid #edece8;
+  position: relative;
+  text-align: center;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .brand-category-list-container .cat_container .cat_item .cat_image .cat_icon {
+  width: 120rpx;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .brand-category-list-container .cat_container .cat_item .cat_name {
+  background-color: #000000;
+  height: 30%;
+  width: 100%;
+  text-align: center;
+  font-size: 22rpx;
+  position: absolute;
+  bottom: 0;
+  opacity: 0.6;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .brand-category-list-container .cat_container .cat_item .cat_name .cat_title {
+  color: #fff;
+  opacity: 1;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .brand-category-list-container .cat_container .active {
+  border-bottom: 6rpx solid #000000;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more {
+  padding: 20rpx 0rpx;
+  width: 100%;
+  background-color: #fff;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container {
+  background-color: #fff;
+  float: left;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item {
+  width: 300rpx;
+  height: 520rpx;
+  padding: 20rpx;
+  background-color: #f8f8f8;
+  margin-left: 20rpx;
+  border-radius: 5%;
+  margin-bottom: 20rpx;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item .good_image {
+  justify-content: center;
+  width: 300rpx;
+  height: 300rpx;
+  flex: 1;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item .good_image .item_image {
+  width: 300rpx;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item .content {
+  flex-direction: column;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item .content .title {
+  font-size: 26rpx;
+  font-weight: bold;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin-bottom: 10rpx;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item .content .subtitle {
+  font-size: 26rpx;
+  color: #666;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10rpx;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item .content .goods_info {
+  display: flex;
+  justify-content: space-between;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item .content .goods_info .price_info {
+  flex-direction: column;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item .content .goods_info .price_info .price {
+  color: red;
+  margin-bottom: 20rpx;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item .content .goods_info .price_info .tag {
+  background: #EA5149;
+  border-radius: 20%;
+  color: white;
+  font-size: 20rpx;
+}
+.brand-detail .brand-container .brand-content .brand-tabbar .house-page .brand-goods-page .wd-infinite-scroll.wd-load-more .item-container .goods_item .content .goods_info .action .iconfont {
+  color: #666;
+  width: 40rpx;
+  font-size: 30px;
+  margin: 25rpx 25rpx 0 0;
+}
+.brand-detail .recommend_wrap {
+  height: 1000rpx;
+}

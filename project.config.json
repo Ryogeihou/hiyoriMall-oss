@@ -1,0 +1,201 @@
+{
+	"permissions": {
+		"openapi": [
+			"templateMessage.send"
+		]
+	},
+	"description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+	"packOptions": {
+		"ignore": [],
+		"include": []
+	},
+	"cloudfunctionRoot": "cloudFn/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": false,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"useMultiFrameRuntime": true,
+		"useApiHook": true,
+		"useApiHostProcess": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enableEngineNative": false,
+		"useIsolateContext": true,
+		"userConfirmedBundleSwitch": false,
+		"packNpmManually": false,
+		"packNpmRelationList": [],
+		"minifyWXSS": true,
+		"disableUseStrict": false,
+		"showES6CompileOption": false,
+		"useCompilerPlugins": false,
+		"minifyWXML": true,
+		"useStaticServer": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.20.2",
+	"appid": "wxf2bf6ec6395716fe",
+	"projectname": "hiyori",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
+	"condition": {
+		"plugin": {
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"list": []
+		},
+		"miniprogram": {
+			"list": [
+				{
+					"id": -1,
+					"name": "database",
+					"pathName": "pages/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/detail/detail",
+					"pathName": "pages/detail/detail",
+					"query": "id=5",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pay/pay",
+					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "后台",
+					"pathName": "pages/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "pages/category/category",
+					"pathName": "pages/category/category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods_list/goods_list",
+					"pathName": "pages/goods_list/goods_list",
+					"query": "cid=10101",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "pages/back_end/back_end",
+					"pathName": "pages/back_end/back_end",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "pages/goods_setting/goods_setting",
+					"pathName": "pages/goods_setting/goods_setting",
+					"query": "cid=10100",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "pages/brand/brand",
+					"pathName": "pages/brand/brand",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/collect/collect",
+					"pathName": "pages/collect/collect",
+					"query": "id=37",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods_update/goods_update",
+					"pathName": "pages/goods_update/goods_update",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/share_code/share_code",
+					"pathName": "pages/share_code/share_code",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/goods_code/text",
+					"pathName": "pages/goods_code/text",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/posterTest/posterTest",
+					"pathName": "pages/posterTest/posterTest",
+					"query": "id=5",
+					"scene": null
+				}
+			]
+		}
+	},
+	"editorSetting": {
+		"tabIndent": "tab",
+		"tabSize": 4
+	}
+}

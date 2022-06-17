@@ -1,0 +1,96 @@
+<!-- pages/index/index.wxml -->
+<view class="style_total">
+  <!-- 搜索框 开始 -->
+  <view class="search">
+    <SearchInput></SearchInput>
+  </view>
+  <!-- 搜索框 结束 -->
+
+  <swiper autoplay indicator-dots circular interval="3500">
+    <swiper-item wx:for="{{banner}}" class="swiper-item" wx:key="id">
+      <navigator url="{{item.path}}">
+        <image lazy-load="true" mode="widthFix" src="{{item.src}}"></image>
+      </navigator>
+    </swiper-item>
+    <!-- <swiper-item class="swiper-item">
+      <navigator url="/pages/detail/detail?id=2">
+        <image lazy-load="true" mode="widthFix" src="cloud://rhtest-xncrn.7268-rhtest-xncrn-1301029421/banner/3.png"></image>
+      </navigator>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+      <navigator url="/pages/detail/detail?id=1">
+        <image lazy-load="true" mode="widthFix" src="cloud://rhtest-xncrn.7268-rhtest-xncrn-1301029421/banner/1.png"></image>
+      </navigator>
+    </swiper-item> -->
+  </swiper>
+  <!-- noticeBox start -->
+  <view class="notice-box">
+    <view class="notice">
+      <image class="notice_icon" src="/images/notice.png"></image>
+      <swiper class="notice_swiper" vertical autoplay circular>
+        <navigator wx:for="{{noticeList}}" wx:key="id" url="/pages/notice/show?id={{item.id}}">
+          <swiper-item>
+            <view class="notice_itemr">{{item.title}}</view>
+          </swiper-item>
+        </navigator>
+      </swiper>
+    </view>
+    <view class="more">
+      <!-- <navigator url="/pages/notice/index">更多 ></navigator> -->
+	  更多 >
+              <!-- <view>客服 ></view> -->
+        <!-- <button open-type="contact"></button> -->
+    </view>
+    <!-- <view class="tool_item"> -->
+        <!-- <view class="iconfont icon-kefu"></view> -->
+        <!-- <view>客服 ></view> -->
+        <!-- <button open-type="contact"></button> -->
+    <!-- </view> -->
+  </view>
+  <!-- noticeBox end -->
+
+  <!-- category-box start -->
+  <view class="category-container">
+    <view class="category-box">
+      <view class="category-list" wx:for="{{categories}}" wx:key="id">
+        <view class="category-column {{activeCategoryId == item.id ? 'type-item-on' : ''}}" bindtap="tabClick" id="{{item.cat_id}}">
+          <navigator url="/pages/goods_list/goods_list?cid={{item.cat_id}}">
+            <image mode="aspectFill" class="category-imgbox" lazy-load="true" src="{{item.cat_icon}}"></image>
+            <view class="category-title">{{item.cat_name}}</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- category-box end -->
+  <!-- cm1 start -->
+  <view class="cm-box">
+    <view class="index_cm">
+      <image class="index_cm" mode="widthFix" src="https://7268-rhtest-xncrn-1301029421.tcb.qcloud.la/banner/cm1.gif?sign=5b31819bec95a1a7b74f78130d181bba&t=1590844677" lazy-load="true" />
+    </view>
+  </view>
+  <!-- cm1 end -->
+  <!-- content_wrap -->
+  <view wx:for="{{list}}" wx:key="key" id="{{item.rhid}}" class="item-container" bindtap="toDetail">
+    <view class="goods_item">
+      <view class="good_image">
+        <image lazy-load="true" class="item_image" mode='widthFix' src="{{item.pics[0]}}"></image>
+      </view>
+      <view class='content'>
+        <view class="title">{{item.subHead}}</view>
+        <view class="subtitle">{{item.title}}</view>
+        <view class="goods_info">
+          <view class="price_info">
+            <view class="price">¥{{item.price}}</view>
+            <!-- <view wx:key="item" class="tag">热度:{{item.count}}</view> -->
+          </view>
+          <!-- <view class='action'>
+            <view class="iconfont icon-jiarugouwuche" data-item="{{item}}" catchtap="addCart"></view>
+          </view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- content_wrap -->
+  <!-- ::before -->
+</view>

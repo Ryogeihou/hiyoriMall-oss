@@ -1,0 +1,130 @@
+{
+	"setting": {},
+	"condition": {
+		"miniprogram": {
+			"list": [
+				{
+					"name": "database",
+					"pathName": "pages/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/detail/detail",
+					"pathName": "pages/detail/detail",
+					"query": "id=362",
+					"scene": null
+				},
+				{
+					"name": "后台",
+					"pathName": "pages/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/order/order",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/category/category",
+					"pathName": "pages/category/category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/goods_list/goods_list",
+					"pathName": "pages/goods_list/goods_list",
+					"query": "cid=10100",
+					"scene": null
+				},
+				{
+					"name": "pages/back_end/back_end",
+					"pathName": "pages/back_end/back_end",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/goods_setting/goods_setting",
+					"pathName": "pages/goods_setting/goods_setting",
+					"query": "cid=10100",
+					"scene": null
+				},
+				{
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/brand/brand",
+					"pathName": "pages/brand/brand",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"name": "pages/collect/collect",
+					"pathName": "pages/collect/collect",
+					"query": "id=37",
+					"scene": null
+				},
+				{
+					"name": "pages/goods_update/goods_update",
+					"pathName": "pages/goods_update/goods_update",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"name": "pages/share_code/share_code",
+					"pathName": "pages/share_code/share_code",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/goods_code/text",
+					"pathName": "pages/goods_code/text",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/posterTest/posterTest",
+					"pathName": "pages/posterTest/posterTest",
+					"query": "id=5",
+					"scene": null
+				},
+				{
+					"name": "pages/notice/index",
+					"pathName": "pages/notice/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "pages/pay/pay",
+					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "captain",
+					"pathName": "pages/captain/captain",
+					"query": "userId=1",
+					"scene": null
+				}
+			]
+		}
+	},
+	"description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}

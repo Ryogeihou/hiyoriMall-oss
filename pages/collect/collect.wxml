@@ -1,0 +1,51 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange"></Tabs>
+
+<block wx:if="{{tabs[0].isActive}}">
+    <view class="collect_main">
+        <!-- <view class="collect_title">
+            <text class="collect_tips active">全部</text>
+            <text class="collect_tips">正在热卖</text>
+            <text class="collect_tips">即将上线</text>
+        </view> -->
+        <view class="collect_content">
+            <navigator class="goods_item" wx:for="{{brand}}" wx:key="item.brandId"
+                url="/pages/brand/brand?id={{item.brandId}}">
+                <!-- 左侧图片容器 -->
+                <view class="goods_img_wrap1">
+                    <image mode="widthFix" src="{{item.logo}}">
+                    </image>
+                </view>
+                <view class="goods_info_wrap">
+                    <view class="goods_title">{{item.title}}</view>
+                    <view class="goods_subHead">{{item.slogan}}</view>
+                    <!-- <view class="goods_price">￥{{item.price}}</view> -->
+                </view>
+            </navigator>
+        </view>
+    </view>
+</block>
+
+<block wx:if="{{tabs[1].isActive}}">
+    <view class="collect_main">
+        <view class="collect_title">
+            <text class="collect_tips active">全部</text>
+            <text class="collect_tips">正在热卖</text>
+            <text class="collect_tips">即将上线</text>
+        </view>
+        <view class="collect_content">
+            <navigator class="goods_item" wx:for="{{collect}}" wx:key="rhid"
+                url="/pages/detail/detail?id={{item.rhid}}">
+                <!-- 左侧图片容器 -->
+                <view class="goods_img_wrap">
+                    <image mode="widthFix" src="{{item.pics}}">
+                    </image>
+                </view>
+                <view class="goods_info_wrap">
+                    <view class="goods_title">{{item.title}}</view>
+                    <view class="goods_subHead">{{item.subHead}}</view>
+                    <view class="goods_price">￥{{item.price}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</block>

@@ -1,0 +1,136 @@
+<view class="brand-detail">
+    <!-- 1 -->
+    <view class="brand-header">
+        <image class="brand_bg" mode="widthFix" src="{{brand.bgpic}}" style="width: 100%; height: 100rpx;" />
+    </view>
+    <!-- 2 -->
+    <view class="top-search-bar">
+        <view class="back-icon"></view>
+        <view class="search"></view>
+    </view>
+    <!-- 3 -->
+    <view class="brand-container">
+        <view class="brand-content">
+            <!-- 4 -->
+            <view class="brand-content-header">
+                <!-- 5 -->
+                <view class="brand-info">
+                    <view class="brand-info-top">
+                        <view class="brand-info-logo-container">
+                            <view class="brand-info-logo">
+                                <image src="{{brand.logo}}" mode="widthFix" style="width: 130rpx;" />
+                            </view>
+                            <view class="brand-info-title-container">
+                                <view class="brand-info-title">{{brand.title}}</view>
+                                <view class="brand-info-focus">{{brand.onSale}}在售商品</view>
+                            </view>
+                        </view>
+                        <view class="brand-info-focus-btn" bindtap="handleCollect">
+                            <text class="iconfont {{isCollect?'icon-gou':'icon-icon-add'}}"></text>
+                            <text wx:if="{{isCollect}}"class="{{isCollect?'focus':'unfocus'}}">已关注</text>
+                            <text wx:if="{{!isCollect}}">关注</text>
+                            
+                                   
+                        </view>
+                    </view>
+                </view>
+                <!-- 6 -->
+                <view class="brand-info-middle">
+                    <view class="brand-info-desc {{isBrandInfoUnfold?'':'isBrandInfoUnfold'}}">
+                        <text>{{brand.intro}}</text>
+                        <text>
+                            官网网站：{{brand.homePage}}
+                        </text>
+                    </view>
+                    <view class="brand-info-unfold {{folded?'folded':''}}" bindtap="handleFold">
+                        <!-- ::before -->
+                        <view class="text">
+                            展开品牌信息
+                            <image src="https://s3.wandougongzhu.cn/s/c9/2x_cafb92.png" mode="widthFix" />
+                        </view>
+                        <!-- ::after -->
+                    </view>
+                </view>
+                <!-- 7 -->
+                <view class=" brand-info-desc-approve  {{folded?'':'folded'}}">
+                    <image src="https://s5.wandougongzhu.cn/s/a9/real_17033b.png" mode="widthFix" />
+
+                </view>
+                <!-- 8 -->
+                <view class="brand-info-unfold  {{folded?'':'folded'}}" bindtap="handleFold">
+                    <view class="text">
+
+                        收起品牌信息
+                        <image class="top" src="https://s3.wandougongzhu.cn/s/c9/2x_cafb92.png" mode="widthFix" />
+                    </view>
+                </view>
+            </view>
+
+            <view class="brand-tabbar">
+                <!-- 9 -->
+                <view class="house-page">
+                    <!-- 10 -->
+                    <view class="hover-top-wrapper"> </view>
+                    <!-- 11 -->
+                    <view class="brand-goods-page">
+                        <!-- 12 -->
+                        <view class="hover-top-wrapper">
+
+                        </view>
+                        <!-- 13 -->
+                        <view class="brand-category-list-container">
+                            <scroll-view scroll-left="{{scrollLeft}}" scroll-with-animation scroll-x
+                                class="cat_container">
+                                <view style="display: flex; flex-direction: row;">
+                                    <block wx:for="{{rightContent.children}}" wx:key="cat_id">
+                                        <view class="cat_item  {{index===currentIndex?'active':''}}"
+                                            bindtap="handleItemTap" data-index="{{index}}" id="{{item.cat_id}}">
+                                            <view class="cat_image">
+                                                <image lazy-load="true" class="cat_icon" mode='widthFix'
+                                                    src="{{item.cat_icon}}"></image>
+                                            </view>
+                                            <view class="cat_name">
+                                                <text class="cat_title">{{item.cat_name}}</text>
+                                            </view>
+                                        </view>
+                                    </block>
+                                </view>
+                            </scroll-view>
+                        </view>
+                        <!-- 14 -->
+                        <view class="wd-infinite-scroll wd-load-more">
+                            <view wx:for="{{list}}" wx:key="key" id="{{item._id}}" class="item-container"
+                                bindtap="toDetail">
+                                <view class="goods_item">
+                                    <view class="good_image">
+                                        <image lazy-load="true" class="item_image" mode='widthFix'
+                                            src="{{item.pics[0]}}"></image>
+                                    </view>
+                                    <view class='content'>
+                                        <view class="title">{{item.subHead}} </view>
+                                        <view class="subtitle">{{item.title}} </view>
+                                        <view class="goods_info">
+                                            <view class="price_info">
+                                                <view class="price">¥{{item.price}}</view>
+                                                <view wx:key="item" class="tag">热度:{{item.count}}</view>
+                                            </view>
+                                            <view class='action'>
+                                                <view class="iconfont icon-jiarugouwuche" data-item="{{item}}"
+                                                    catchtap="addCart"></view>
+                                            </view>
+                                        </view>
+                                    </view>
+
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+
+
+    </view>
+
+</view>

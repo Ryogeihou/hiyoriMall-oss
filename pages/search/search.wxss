@@ -1,0 +1,94 @@
+page {
+  background-color: #dedede;
+}
+.search_row {
+  margin: 20rpx;
+  height: 60rpx;
+  display: flex;
+}
+.search_row input {
+  background-color: #fff;
+  flex: 1;
+  height: 100%;
+  padding-left: 30rpx;
+  width: 200rpx;
+}
+.cancelButton {
+  /* color: #000; */
+  width: 80rpx;
+  height: 100%;
+  padding: 0;
+  margin-left: 10rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+}
+.first_tab .item-container {
+  display: flex;
+  float: left;
+}
+.first_tab .item-container .goods_item {
+  transform: translateX(2.5%);
+  width: 300rpx;
+  height: 520rpx;
+  padding: 20rpx;
+  background-color: #f8f8f8;
+  margin-left: 20rpx;
+  border-radius: 5%;
+  margin-bottom: 20rpx;
+}
+.first_tab .item-container .goods_item .good_image {
+  justify-content: center;
+  width: 300rpx;
+  height: 300rpx;
+  flex: 1;
+}
+.first_tab .item-container .goods_item .good_image .item_image {
+  width: 300rpx;
+}
+.first_tab .item-container .goods_item .content {
+  flex-direction: column;
+}
+.first_tab .item-container .goods_item .content .title {
+  font-size: 26rpx;
+  font-weight: bold;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin-bottom: 10rpx;
+}
+.first_tab .item-container .goods_item .content .subtitle {
+  font-size: 26rpx;
+  color: #666;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10rpx;
+}
+.first_tab .item-container .goods_item .content .goods_info {
+  display: flex;
+  justify-content: space-between;
+}
+.first_tab .item-container .goods_item .content .goods_info .price_info {
+  flex-direction: column;
+}
+.first_tab .item-container .goods_item .content .goods_info .price_info .price {
+  color: red;
+  margin-bottom: 20rpx;
+}
+.first_tab .item-container .goods_item .content .goods_info .price_info .tag {
+  background: #EA5149;
+  border-radius: 20%;
+  color: white;
+  font-size: 20rpx;
+}
+.first_tab .item-container .goods_item .content .goods_info .action .iconfont {
+  color: #666;
+  width: 40rpx;
+  font-size: 30px;
+  margin: 25rpx 25rpx 0 0;
+}
